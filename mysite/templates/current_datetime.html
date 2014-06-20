@@ -1,9 +1,7 @@
-<html>
-<head>
-	<title>Current date time</title>
-</head>
-<body>
-	<h1>Current date time</h1>
-	<p>It is now: {{ current_date }}.</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block tittle %}The current time{% endblock %}
+
+{% block content %}
+<p>It is now {{ current_date }}.</p>
+{% endblock %}
