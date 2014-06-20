@@ -84,8 +84,8 @@ STATIC_URL = '/static/'
 # variable para las ubicaciones de las plantillas
 TEMPLATE_DIRS = (
     # primera forma de agregar la ubicacion de las plantillas
-    #'/Desktop/Tutorial Django/mysite/templates',
+    #'/home/sebastian/Desktop/Tutorial Django/mysite/templates',
     
-    # otra forma es esta:
-    os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
+    # otra forma es esta: BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+    os.path.join(BASE_DIR,'templates').replace('\\','/'),
 )
