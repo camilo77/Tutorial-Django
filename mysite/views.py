@@ -14,9 +14,14 @@ def hello(request):
 #	return HttpResponse(html)
 
 # APLICANDO METODO RENDER TO RESPONSE para la vista anterior
+#def current_datetime(request):
+#	now = datetime.datetime.now()
+#	return render_to_response('current_datetime.html', {'current_date':now})
+
+# APLICANDO EL METODO DE LOCALS PARA MAPEAR TODAS LAS VARIABLES LOCALES DE LA VISTA Y AHORRAR CODIGO
 def current_datetime(request):
-	now = datetime.datetime.now()
-	return render_to_response('current_datetime.html', {'current_date':now})
+	current_date = datetime.datetime.now()
+	return render_to_response('current_datetime.html',locals()) 
 
 def hours_ahead(request, offset):
 	try:
