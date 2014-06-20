@@ -67,7 +67,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Chicago'
 
 USE_I18N = True
 
@@ -80,3 +80,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# variable para las ubicaciones de las plantillas
+TEMPLATE_DIRS = (
+    # primera forma de agregar la ubicacion de las plantillas
+    #'/Desktop/Tutorial Django/mysite/templates',
+    
+    # otra forma es esta:
+    os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
+)
