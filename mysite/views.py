@@ -3,6 +3,7 @@ from django.template.loader import get_template
 from django.template import Context
 from django.shortcuts import render_to_response
 import datetime
+from books import *
 
 def hello(request):
 	return HttpResponse("hello word")
