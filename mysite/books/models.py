@@ -23,4 +23,4 @@ class Book(models.Model):
 	publication_date = models.DateField()
 
 def mensaje():
-	"hola mundo"
+	print "hola mundo"
