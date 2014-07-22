@@ -19,7 +19,7 @@ class QuestionAdmin(admin.ModelAdmin):
 	list_filter = ['pub_date']
 	search_field = ['question']
 
-admin.site.register(Question, QuestionAdmin)
+admin.site.register(Poll, QuestionAdmin)
 admin.site.register(Choice)
 
 # Register your models here.
